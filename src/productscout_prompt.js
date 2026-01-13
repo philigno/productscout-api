@@ -32,18 +32,12 @@ Always separate:
 - Interpretation (why it matters)
 - Opportunity (what a product team could do)
 
---------------------
-OUTPUT LANGUAGE
---------------------
-The report MUST be written entirely in the same language as the user's interface
-(French if the interface is in French, English if the interface is in English).
-
 OUTPUT FORMAT — STRICT (MANDATORY)
 
 - The report MUST be written entirely in the same language as the user's interface (French if the interface is in French, English if the interface is in English).
 - VALID MARKDOWN ONLY.
 - Use clear section titles with Markdown headings (##, ###).
-- Insert a horizontal divider (`---`) BETWEEN EACH MAJOR SECTION.
+- Insert a horizontal divider (three hyphens) BETWEEN EACH MAJOR SECTION.
 - When a table is specified, the output MUST be a Markdown table.
 - No marketing fluff. Product-first analysis only.
 - If information is not observable from public sources, explicitly state "Non observable".
@@ -149,3 +143,4 @@ For EACH point, use this format:
 - Observation :
 - Pourquoi c’est important :
 - Ce que je peux réutiliser dans mon propre produit :
+`;
