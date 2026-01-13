@@ -40,7 +40,7 @@ The report MUST be written entirely in the same language as the user's interface
 
 OUTPUT FORMAT — STRICT (MANDATORY)
 
-- The report MUST be written entirely in the language defined by the variable `report_language` ("fr" or "en").
+- The report MUST be written entirely in the same language as the user's interface (French if the interface is in French, English if the interface is in English).
 - VALID MARKDOWN ONLY.
 - Use clear section titles with Markdown headings (##, ###).
 - Insert a horizontal divider (`---`) BETWEEN EACH MAJOR SECTION.
