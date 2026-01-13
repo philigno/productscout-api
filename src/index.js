@@ -16,7 +16,6 @@ app.use(express.json({ limit: "2mb" }));
 
 /* =========================
    HEALTH CHECK
-   (Render / monitoring / debug)
 ========================= */
 
 app.get("/health", (req, res) => {
@@ -28,20 +27,13 @@ app.get("/health", (req, res) => {
 });
 
 /* =========================
-   CORE API
+   CORE ROUTE
 ========================= */
 
-/**
- * POST /api/analyze
- * Body:
- * {
- *   url: string
- * }
- */
 app.post("/api/analyze", analyzeHandler);
 
 /* =========================
-   FALLBACK (404)
+   404 FALLBACK
 ========================= */
 
 app.use((req, res) => {
@@ -58,8 +50,8 @@ app.use((req, res) => {
    SERVER
 ========================= */
 
-const port = process.env.PORT || 10000;
+const PORT = process.env.PORT || 10000;
 
-app.listen(port, () => {
-  console.log(`🚀 ProductScout API running on :${port}`);
+app.listen(PORT, () => {
+  console.log(`🚀 ProductScout API running on :${PORT}`);
 });
