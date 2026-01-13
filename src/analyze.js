@@ -1,6 +1,14 @@
 import { scrapeWebsite } from "./scraper.js";
 import { runProductScout } from "./openai.js";
 
+/**
+ * POST /api/analyze
+ * Body:
+ * {
+ *   input_url: string,
+ *   language?: "fr" | "en"
+ * }
+ */
 export default async function analyzeHandler(req, res) {
   try {
     const { input_url, language = "fr" } = req.body || {};
@@ -11,20 +19,29 @@ export default async function analyzeHandler(req, res) {
       });
     }
 
-    const markdown = await scrapeWebsite(input_url);
+    // 1️⃣ Scrape website
+    const websiteContent = await scrapeWebsite(input_url);
 
-    if (!markdown || markdown.length < 200) {
+    if (!websiteContent || websiteContent.length < 200) {
       return res.status(400).json({
-        error: "Could not extract enough content from website",
+        error: "Unable to extract enough content from website",
       });
     }
 
+    // 2️⃣ Run ProductScout brain
     const report = await runProductScout({
-      websiteContent: markdown,
+      websiteContent,
       inputUrl: input_url,
       language,
     });
 
+    if (!report || report.length < 50) {
+      return res.status(500).json({
+        error: "Failed to generate ProductScout report",
+      });
+    }
+
+    // 3️⃣ Return report
     return res.json({
       report,
     });
