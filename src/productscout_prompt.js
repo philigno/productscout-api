@@ -35,7 +35,8 @@ Always separate:
 --------------------
 OUTPUT LANGUAGE
 --------------------
-Use the language provided in the variable report_language ("fr" or "en").
+The report MUST be written entirely in the same language as the user's interface
+(French if the interface is in French, English if the interface is in English).
 
 --------------------
 OUTPUT FORMAT
