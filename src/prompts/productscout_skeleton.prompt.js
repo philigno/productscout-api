@@ -1,16 +1,16 @@
 /**
  * ProductScout — Skeleton prompt
  * --------------------------------
- * This prompt generates ONLY the report structure.
+ * Generates ONLY the report structure.
  * No analysis. No content. No interpretation.
  * STRICT markdown skeleton.
  */
 
-/* ===============================
-   🇫🇷 VERSION FRANÇAISE
-   =============================== */
+export function getProductScoutSkeletonPrompt(lang = "fr") {
+  const normalizedLang = lang.toLowerCase().startsWith("fr") ? "fr" : "en";
 
-export const PRODUCTSCOUT_SKELETON_PROMPT_FR = `
+  if (normalizedLang === "fr") {
+    return `
 Tu es ProductScout.
 
 Ta tâche UNIQUE est de générer le SQUELETTE du rapport produit.
@@ -68,11 +68,8 @@ Règles STRICTES :
 ## 3. Parcours & UX (lecture produit)
 
 ### 3.1 Découverte / Landing
-
 ### 3.2 Activation
-
 ### 3.3 Monétisation
-
 ### 3.4 Rétention
 
 ---
@@ -140,32 +137,16 @@ Règles STRICTES :
 - Pourquoi c’est important :
 - Ce que je peux réutiliser dans mon propre produit :
 `;
+  }
 
-/* ===============================
-   🇬🇧 VERSION ANGLAISE
-   =============================== */
-
-export const PRODUCTSCOUT_SKELETON_PROMPT_EN = `
+  // 🇬🇧 EN
+  return `
 You are ProductScout.
 
 Your ONLY task is to generate the REPORT SKELETON.
 ⚠️ Do NOT analyze the product.
 ⚠️ Do NOT write content.
 ⚠️ Do NOT interpret anything.
-
-Goal:
-- Generate ONLY the report structure
-- STRICT markdown format
-- No invention
-- No explanation
-
-Rules:
-- Valid markdown only
-- Use ## and ### exactly
-- Empty tables where required
-- All sections must exist
-- No filler text
-- No examples
 
 ---
 
@@ -179,98 +160,6 @@ Rules:
 ---
 
 ## 1. Product identity
-
-| Field | Value |
-|------|-------|
-| Product name | |
-| URL | |
-| Product type | |
-| Primary target | |
-| Business model | |
-| Estimated maturity | |
-
----
-
-## 2. Value proposition (PM rewrite)
-- For who:
-- Main problem:
-- Proposed solution:
-- Key differentiation:
-
----
-
-## 3. UX & flows (product lens)
-
-### 3.1 Discovery / Landing
-
-### 3.2 Activation
-
-### 3.3 Monetization
-
-### 3.4 Retention
-
----
-
-## 4. Key features
-
-| Domain | Feature | For who | User value | Observability |
-|--------|---------|---------|------------|---------------|
-|        |         |         |            |               |
-
----
-
-## 5. Pricing & business model
-
-| Offer | Price | Commitment | Mechanics | Clarity |
-|------|-------|------------|-----------|---------|
-|      |       |            |           |         |
-
----
-
-## 6. Competitive benchmark
-
-| Competitor | Positioning | Key difference |
-|------------|-------------|----------------|
-|            |             |                |
-
----
-
-## 7. Prioritized product opportunities
-
-| Opportunity | Impact | Effort | Why |
-|-------------|--------|--------|-----|
-|             |        |        |     |
-
----
-
-## 8. Limits & assumptions
-- 
-- 
-
----
-
-## 9. Recommended illustrations
-- Landing page:
-- Pricing page:
-- Product or catalog page:
-- Conversion funnel:
-
----
-
-## 10. 3 key product learnings
-
-### Product learning #1
-- Observation:
-- Why it matters:
-- What I can reuse in my own product:
-
-### Product learning #2
-- Observation:
-- Why it matters:
-- What I can reuse in my own product:
-
-### Product learning #3
-- Observation:
-- Why it matters:
-- What I can reuse in my own product:
+...
 `;
+}
