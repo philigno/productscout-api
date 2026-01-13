@@ -1,5 +1,4 @@
-import { generateReport } from "./generator.js";
-
+import { generateProductScoutReport } from "./services/productscoutGenerator.js";
 /**
  * POST /api/analyze
  * Body:
