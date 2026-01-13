@@ -15,8 +15,14 @@ Rules:
   2) Interpretation (why it matters)
   3) Opportunity (what to do)
 
-Output language:
-- Use the language provided in the variable report_language ("fr" or "en").
+Language rules:
+- The report MUST be written entirely in the language defined by the variable `report_language`.
+- `report_language` can be "fr" or "en".
+- If the website content is primarily in French, use "fr".
+- If the website content is primarily in English, use "en".
+- Never mix languages.
+- Section titles, tables, explanations and examples must ALL be in the same language.
+
 
 Output format:
 - VALID MARKDOWN ONLY
