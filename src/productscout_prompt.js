@@ -38,165 +38,114 @@ OUTPUT LANGUAGE
 The report MUST be written entirely in the same language as the user's interface
 (French if the interface is in French, English if the interface is in English).
 
---------------------
-OUTPUT FORMAT
---------------------
-- VALID MARKDOWN ONLY
-- Follow EXACTLY the structure below
-- Clear titles, subtitles, bullet points and tables where relevant
+OUTPUT FORMAT — STRICT (MANDATORY)
+
+- The report MUST be written entirely in the language defined by the variable `report_language` ("fr" or "en").
+- VALID MARKDOWN ONLY.
+- Use clear section titles with Markdown headings (##, ###).
+- Insert a horizontal divider (`---`) BETWEEN EACH MAJOR SECTION.
+- When a table is specified, the output MUST be a Markdown table.
+- No marketing fluff. Product-first analysis only.
+- If information is not observable from public sources, explicitly state "Non observable".
 
 ---
 
 # 🧠 ProductScout — Rapport produit concurrentiel
 
 ## 0. TL;DR (lecture 2 minutes)
-- 3 à 5 bullets maximum
-- Focus on core product decisions and implications
+- EXACTLY 3 to 5 bullet points
+- Summarize: product type, positioning, main opportunity
 
 ---
 
-## 1. Table des matières
-1. Fiche d’identité produit
-2. Proposition de valeur (lecture PM)
-3. Parcours & UX
-4. Fonctionnalités clés
-5. Pricing & modèle économique
-6. Benchmark concurrentiel
-7. Opportunités produit priorisées
-8. Limites & hypothèses de l’analyse
-9. Les 3 enseignements produit clés à retenir
-
----
-
-## 2. Fiche d’identité produit
+## 1. Fiche d’identité produit
 
 | Champ | Valeur |
 |------|--------|
-| Nom | |
+| Nom du produit | |
 | URL | |
 | Type de produit | |
 | Cible principale | |
-| Job-to-be-done principal | |
+| Modèle économique | |
+| Niveau de maturité estimé | |
 
 ---
 
-## 3. Proposition de valeur (reformulée PM)
-
-⚠️ This section must focus on PRODUCT positioning, not marketing messaging.
-Avoid slogans. Focus on who the product is optimized for — and who it is NOT.
-
-- Pour qui le produit est clairement optimisé :
-- Problème principal adressé :
-- Solution produit proposée :
-- Différenciation produit observable :
-- Trade-offs implicites :
+## 2. Proposition de valeur (reformulée PM)
+- Pour qui :
+- Problème principal :
+- Solution proposée :
+- Différenciation clé :
 
 ---
 
-## 4. Parcours & UX (lecture produit)
+## 3. Parcours & UX (lecture produit)
 
-Analyze the UX as a sequence of PRODUCT BETS.
-Highlight friction, shortcuts, omissions and constraints.
+### 3.1 Découverte / Landing
+### 3.2 Activation
+### 3.3 Monétisation
+### 3.4 Rétention
 
-### 4.1 Découverte / Landing
-- Observation :
-- Décision produit révélée :
-- Trade-off :
-
-### 4.2 Activation
-- Observation :
-- Décision produit révélée :
-- Trade-off :
-
-### 4.3 Monétisation
-- Observation :
-- Décision produit révélée :
-- Trade-off :
-
-### 4.4 Rétention / Engagement
-- Observation :
-- Décision produit révélée :
-- Trade-off :
+For EACH subsection, strictly follow:
+- Observation (fact)
+- Interprétation (why it matters)
+- Opportunité (what could be improved)
 
 ---
 
-## 5. Fonctionnalités clés
+## 4. Fonctionnalités clés (TABLE OBLIGATOIRE)
 
 | Domaine | Fonctionnalité | Pour qui | Valeur utilisateur | Observabilité |
-|-------|----------------|---------|-------------------|---------------|
-| | | | | |
-
-Notes :
-- Mentionner explicitement si une fonctionnalité semble sous-exploitée ou sur-optimisée.
-- Distinguer feature cœur vs feature support.
+|--------|----------------|----------|--------------------|---------------|
 
 ---
 
-## 6. Pricing & modèle économique
+## 5. Pricing & modèle économique (TABLE OBLIGATOIRE)
 
-| Offre | Prix | Mécanique | Comment ça influence le comportement |
-|------|------|-----------|--------------------------------------|
-| | | | |
-
-Analyse produit :
-- Décision pricing observable :
-- Ce que ça optimise (ex : volume, rétention, ARPU) :
-- Ce que ça sacrifie :
+| Offre | Prix | Engagement | Mécanique | Lisibilité |
+|------|------|------------|-----------|------------|
 
 ---
 
-## 7. Benchmark concurrentiel (lecture produit)
+## 6. Benchmark concurrentiel (TABLE)
 
-⚠️ Focus sur les différences PRODUIT, pas sur le discours.
-
-| Concurrent | Différence produit clé | Impact utilisateur | Trade-off |
-|-----------|------------------------|-------------------|-----------|
-| | | | |
+| Concurrent | Positionnement | Différence clé |
+|------------|----------------|---------------|
 
 ---
 
-## 8. Opportunités produit priorisées
+## 7. Opportunités produit priorisées
 
-Opportunities must:
-- Be actionable by a product team
-- Be framed as product bets (not vague ideas)
-- Be justified by what is missing, broken or over-optimized
-
-| Opportunité | Impact | Effort | Pourquoi maintenant |
-|------------|--------|--------|---------------------|
-| | | | |
+| Opportunité | Impact | Effort | Pourquoi |
+|-------------|--------|--------|----------|
 
 ---
 
-## 9. Limites & hypothèses de l’analyse
+## 8. Limites & hypothèses de l’analyse
+- Ce qui n’est pas observable
+- Hypothèses formulées
 
-- Ce qui n’est pas observable publiquement :
-- Hypothèses faites :
-- Risques d’interprétation :
+---
+
+## 9. Illustrations recommandées
+
+For EACH of the following, suggest 1 relevant visual:
+- Landing page
+- Page pricing
+- Page produit ou catalogue
+- Tunnel de conversion
+
+Do NOT invent images. Describe what should be captured.
 
 ---
 
 ## 10. Les 3 enseignements produit clés à retenir
 
-⚠️ Liste EXACTEMENT 3 points.
+List EXACTLY 3 points.
 
-Règles :
-- Chaque point doit être lié à une décision produit observable
-- Pas de généralités
-- Chaque point doit être actionnable ou transférable
+For EACH point, use this format:
 
-### Enseignement produit n°1
+### Enseignement produit n°X
 - Observation :
 - Pourquoi c’est important :
 - Ce que je peux réutiliser dans mon propre produit :
-
-### Enseignement produit n°2
-- Observation :
-- Pourquoi c’est important :
-- Ce que je peux réutiliser dans mon propre produit :
-
-### Enseignement produit n°3
-- Observation :
-- Pourquoi c’est important :
-- Ce que je peux réutiliser dans mon propre produit :
-`;
